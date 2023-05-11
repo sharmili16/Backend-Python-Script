@@ -1,0 +1,36 @@
+{
+    "rules": [
+        {
+            "description": "Rule 1",
+            "condition": "all",
+            "filters": [
+                {
+                    "field_name": "From",
+                    "predicate": "contains",
+                    "value": "Spotify"
+                },
+                {
+                    "field_name": "Subject",
+                    "predicate": "contains",
+                    "value": "Premium"
+                },
+                {
+                    "field_name": "To",
+                    "predicate": "contains",
+                    "value": "sharmilibaktha"
+                },
+                {
+                    "field_name":"Date",
+                    "predicate":"greater than",
+                    "value":"2023-04-25"
+                }
+
+            ],
+            "action": {
+                "name": "Move Message",
+                "destination": "SPAM",
+                "apply": "UNREAD"
+            }
+        }
+    ]
+}
